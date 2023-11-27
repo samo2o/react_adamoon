@@ -1,8 +1,12 @@
 export default function ContactUs() {
     return (
-        <section className="flex flex-col gap-2 w-full items-center justify-center h-[150px]">
-            <h1 className="text-xl text-center">Subscribe to our emails</h1>
-            <input className="px-4 py-2 w-[320px] border-[1px] border-black text-black/50" placeholder="Email"/>
+        <section className="w-full">
+            <div className="flex flex-col py-5 items-center justify-center w-full">
+                <h1 className="text-xl text-center mb-5">Contact Us</h1>
+                <input className="text-black px-4 py-2 mb-2 w-[320px] border-[1px] border-black text-black/50 focus:outline-none" placeholder="Email"/>
+                <textarea className="text-black px-4 py-2 mb-2 w-[320px] h-[120px] border-[1px] resize-none border-black text-black/50 focus:outline-none" placeholder="Messege"/>
+                <button className="w-[320px] py-2 bg-black text-white font-semibold hover:opacity-80 transition-opacity duration-100">Send</button>
+            </div>
         </section>
     );
 }

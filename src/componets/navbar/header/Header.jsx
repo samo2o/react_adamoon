@@ -1,6 +1,6 @@
 import logoBlack from '../../../assets/adamoon_black.png';
 // import logoWhite from '../../../assets/adamoon_white.png';
-// import logoColor from '../../../assets/adamoon_colored.png';
+import logoColor from '../../../assets/adamoon_colored.png';
 import Navbar from "../Navbar";
 
 export default function Header() {
@@ -9,7 +9,7 @@ export default function Header() {
     return(
         <nav className="fixed w-full border-b-[1px] border-black bg-white z-10">
             <Navbar 
-                logo={logoBlack}
+                logo={[logoBlack, logoColor]}
                 taps={taps}
             />
         </nav>

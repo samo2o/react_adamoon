@@ -42,6 +42,18 @@ function App() {
       price:  '29.99',
       description: 'Lorem ipsum dolor sit amet. Et dolores perspiciatis sed dignissimos doloremque eum magnam dolor qui expedita molestiae et rerum perferendis.',
     },
+    {
+      title:  'title 06',
+      src: image_05,
+      price:  '29.99',
+      description: 'Lorem ipsum dolor sit amet. Et dolores perspiciatis sed dignissimos doloremque eum magnam dolor qui expedita molestiae et rerum perferendis. Lorem ipsum dolor sit amet. Et dolores perspiciatis sed dignissimos doloremque eum magnam dolor qui expedita molestiae et rerum perferendis.',
+    },
+    {
+      title:  'title 07',
+      src: image_05,
+      price:  '29.99',
+      description: 'Lorem ipsum dolor sit amet. Et dolores perspiciatis sed dignissimos doloremque eum magnam dolor qui expedita molestiae et rerum perferendis.',
+    },
   ];
 
   return (

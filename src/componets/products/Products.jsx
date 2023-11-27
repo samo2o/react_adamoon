@@ -1,20 +1,42 @@
 export default function Products({ data, ...props }) {
+    const maxDisplayedProducts = 6;
+
     return (
         <section {...props}>
-            <h1 className="text-2xl text-center mt-5 font-bold">Produkte</h1>
-            <div className="md:grid grid-cols-3 mx-auto max-w-[980px]">
+            <h1 className="text-2xl text-center my-5 font-bold">Produkte</h1>
+            <div className="grid grid-cols-2 md:grid-cols-3 mx-auto mb-[12px] max-w-[980px] px-2">
                 {
-                    data.map((item, index) => (
-                        <div className="flex flex-col items-center justify-content m-5 border-[1px] border-black" id={index}>
-                            <img className="w-[720px] md:w-[320px]" src={item.src} alt="" />
-                            <h2 className="w-full pt-4 px-4 ptb-2 capitalize text-lg font-bold">{item.title}</h2>
-                            <h4 className="w-full px-4 ptb-2">{item.price}</h4>
-                            <p className="px-4 pt-2">{item.description}</p>
-                            <div className="w-full p-4">
-                                <button className="px-4 py-2 border-[1px] border-black">Order</button>
+                    data
+                        .filter((item, index) => index < maxDisplayedProducts)
+                        .map((item, index) => (
+                            <div className="flex flex-col items-center justify-content mx-1 mb-2 border-[1px] border-black" key={index}>
+                                <div className="overflow-hidden">
+                                    <img className="w-[720px] md:w-[320px] hover:scale-105 transition-transform duration-300" src={item.src} alt="" />
+                                </div>
+                                <h2 className="w-full pt-4 px-4 ptb-2 capitalize text-lg font-bold cursor-default">{item.title}</h2>
+                                <h4 className="w-full px-4 ptb-2 cursor-default">{item.price}</h4>
+                                <p className="px-4 pt-2 h-[128px]">
+                                    {
+                                        item.description.length > 140
+                                            ? `${item.description.slice(0, 140)}... `
+                                            : item.description
+                                    }
+                                    {
+                                        item.description.length > 140 && <span className="font-semibold cursor-pointer hover:underline">Read more</span>
+                                    }
+                                </p>
+                                <div className="w-full p-4">
+                                    <button className="px-4 py-2 border-[1px] bg-black text-white border-white hover:opacity-80 transition-opacity duration-100">Bestellen</button>
+                                </div>
                             </div>
+                        ))
+                }
+                {
+                    data.length > maxDisplayedProducts && (
+                        <div className="flex items-center justify-center w-full col-span-3">
+                            <button className="px-4 py-2 my-2 bg-black text-white font-semibold hover:opacity-80 transition-opacity duration-100">Alle anzeigen</button>
                         </div>
-                    ))
+                    )
                 }
             </div>
         </section>

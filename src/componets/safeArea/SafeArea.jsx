@@ -1,6 +1,6 @@
 export default function SafeArea({ Content }) {
     return (
-        <div className="pt-[48px]">
+        <div className="pt-[44px]">
             {Content}
         </div>
     );

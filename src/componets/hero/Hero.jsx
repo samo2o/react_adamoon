@@ -14,8 +14,8 @@ export default function Hero() {
 
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white font-fredoka">
                 <h1 className="text-3xl">Heart Jelly</h1>
-                <p className="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <button className="mt-2 px-8 py-2 border-[1px] border-white" href="#">Shop</button>
+                <p className="my-2 text-center mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button className="mt-2 px-8 py-2 border-[1px] border-white hover:bg-white hover:text-black transition-colors duration-100" href="#">Shop</button>
             </div>
         </section>
     );
