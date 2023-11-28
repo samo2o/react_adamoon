@@ -34,7 +34,7 @@ export default function Products({ data, ...props }) {
                 {
                     data.length > maxDisplayedProducts && (
                         <div className="flex items-center justify-center w-full col-span-3">
-                            <button className="px-4 py-2 my-2 bg-black text-white font-semibold hover:opacity-80 transition-opacity duration-100">Alle anzeigen</button>
+                            <button className="px-4 py-2 my-2 bg-black text-white hover:opacity-80 transition-opacity duration-100">Alle anzeigen</button>
                         </div>
                     )
                 }

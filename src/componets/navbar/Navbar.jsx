@@ -1,8 +1,14 @@
+import { Link } from 'react-router-dom';
+
 export default function Navbar({logo, taps=[]}) {
+    function logoClickHandle() {
+        window.location.href = window.location.origin;
+    }
+
     return(
         <div className="flex mx-auto py-2 max-w-[1200px] font-fredoka">
             {/* logo */}
-            <div className="group relative contents px-4">
+            <div className="group relative contents px-4" onClick={logoClickHandle}>
                 <img className="absolute h-7 w-auto cursor-pointer opacity-100 group-hover:opacity-0 mx-2" src={logo[0]} alt="" />
                 <img className="absolute h-7 w-auto cursor-pointer opacity-0 group-hover:opacity-100 mx-2" src={logo[1]} alt="" />
                 <img className="invisible h-7 w-auto mx-2" src={logo[1]} alt="" />
@@ -12,9 +18,9 @@ export default function Navbar({logo, taps=[]}) {
             <div className="hidden md:flex md:flex-1 ml-10 items-center space-x-10">
                 {
                     taps.map((tap, index) => (
-                        <div key={index} className="cursor-pointer hover:underline">
-                            {tap}
-                        </div>
+                        <Link to={tap.link} key={index} className="cursor-pointer hover:underline">
+                            {tap.name}
+                        </Link>
                     ))
                 }
             </div>
