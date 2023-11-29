@@ -10,6 +10,7 @@ import image_02 from '../assets/test/img_02.jpg';
 import image_03 from '../assets/test/img_03.jpg';
 import image_04 from '../assets/test/img_04.jpg';
 import image_05 from '../assets/test/img_05.jpg';
+import { taps } from "./config";
 
 export default function Homepage() {
     const defaultData = [
@@ -71,6 +72,8 @@ export default function Homepage() {
                 </>
             }/>
             <Footer 
+                taps={taps}
+                contactUs={true}
                 year="2023"
                 domain="adamoon.de"
             />
